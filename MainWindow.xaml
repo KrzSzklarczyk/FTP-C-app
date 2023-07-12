@@ -1,0 +1,37 @@
+﻿<Window x:Class="FTPklient_serwer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FTPklient_serwer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF444444" Height="479" VerticalAlignment="Top" HorizontalAlignment="Left" Width="811">
+        <Button x:Name="btnPobierz" Content="Pobierz" HorizontalAlignment="Left" Margin="10,235,0,0" VerticalAlignment="Top" Height="78" Width="101" Click="btnPobierz_Click"/>
+        <TextBox x:Name="txtServer" HorizontalAlignment="Left" Margin="109,93,0,0" TextWrapping="Wrap" Text="127.0.0.1&#x9;" VerticalAlignment="Top" Width="140" Height="28" TextChanged="txtServer_TextChanged"/>
+        <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Margin="108,136,0,0" TextWrapping="Wrap" Text="demo" VerticalAlignment="Top" Width="140" Height="28" RenderTransformOrigin="0.965,0.097"/>
+        <TextBox x:Name="txtHaslo" HorizontalAlignment="Left" Margin="109,188,0,0" TextWrapping="Wrap" Text="demo" VerticalAlignment="Top" Width="138" Height="28"/>
+        <TextBox x:Name="txtSciezkadoserwera" HorizontalAlignment="Left" Margin="109,54,0,0" TextWrapping="Wrap" Text="sciezka do serwera" VerticalAlignment="Top" Width="140" Height="28"/>
+        <TextBox x:Name="txtSciezkadokompa" HorizontalAlignment="Left" Margin="108,10,0,0" TextWrapping="Wrap" Text="sciezka lokalna" VerticalAlignment="Top" Width="139" Height="28" RenderTransformOrigin="0.577,2.513"/>
+        <Button x:Name="btnWyslij" Content="Wyslij" HorizontalAlignment="Left" Margin="135,235,0,0" VerticalAlignment="Top" Height="78" Width="114" Click="btnWyslij_Click"/>
+        <Label Content="Adres ip serwera" Margin="0,93,699,313"/>
+        <Button x:Name="btnSzukajserwer" Content="Browse serwer" HorizontalAlignment="Left" Margin="260,54,0,0" VerticalAlignment="Top" Height="33" Width="158" Click="btnSzukajserwer_Click"/>
+        <Button x:Name="btnSzukajlokalnie" Content="Browse local path" HorizontalAlignment="Left" Margin="260,7,0,0" VerticalAlignment="Top" Height="33" Width="158" Click="btnSzukajlokalnie_Click"/>
+        <Label Content="lokalna scieżka" Margin="10,10,689,396"/>
+        <Label Content="Login" Margin="40,132,659,274"/>
+        <Label Content="Haslo" Margin="40,184,659,222"/>
+        <Label Content="sciezka serwer" Margin="10,50,689,356"/>
+        <ListBox x:Name="lbxWyswietl" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="271,113,391,166" RenderTransformOrigin="0.5,0.5">
+            <ListBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.075"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ListBox.RenderTransform>
+        </ListBox>
+        <Label Content="Aplikacja sieci komputerowe - FTP&#xD;&#xA;Krzysztof Szklarczyk&#xD;&#xA;Marek Tarnawski" Margin="21,355,589,64"/>
+
+    </Grid>
+</Window>
